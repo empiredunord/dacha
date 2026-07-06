@@ -1,0 +1,189 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    border: 0;
+    margin: 0;
+    outline: 0;
+    padding: 0;
+}
+
+header {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.65)),
+        url("hero.jpg") center / cover no-repeat;
+    background-color: #888;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: height 0.3s;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+header h1 {
+    background-image: linear-gradient(90deg, #ff7e5f, #ffd39c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 4.5rem;
+    padding: 3px 20px 0;
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    letter-spacing: 6px;
+    
+}
+
+header p {
+    color: #f0f0f0;
+    font-family: "Arial", sans-serif;
+    font-size: 1rem;
+    padding: 0 10px;
+    margin-top: -8px;
+    text-shadow: 0 0 4px rgba(0, 0, 0, .4);
+}
+
+header form {
+    display: flex;
+    align-items: center;
+    margin-top: 36px;
+    background: #cecece5e;
+    border: 1px solid #ffffff3b;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: left;
+    transition: margin-top 0.2s;
+}
+
+header form label {
+    border-right: 1px solid #ffffff3b;
+    padding: 10px 20px;
+}
+
+header form .field {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+}
+
+header form .field.range {
+    display: none;
+}
+
+header form .field > i {
+    font-style: normal;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+header form input {
+    background: transparent;
+    color: white;
+    flex: 1;
+    font-size: 14px;
+    line-height: 20px;
+    -webkit-text-size-adjust: 100%;
+}
+
+header form input::placeholder {
+  color: #ccc;
+  opacity: 1;
+}
+
+header form button {
+    color: #fff;
+    background-color: #4e66f8;
+    border-color: #4e66f8;
+    height: 100%;
+    padding: 14px 32px 12px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header form button:hover {
+    background-color: #425aec;
+}
+
+header form button > i {
+    display: none;
+}
+
+header.compact {
+    height: 90px;
+    border-bottom: 1px solid #606060;
+}
+
+header.compact h1,
+header.compact p {
+    display: none;
+}
+
+header.compact form {
+    margin-top: 0 !important;
+}
+
+.flatpickr-calendar {
+    font-family: "Arial", sans-serif;
+    font-size: 85%;
+    margin-top: 8px;
+}
+
+.flatpickr-calendar::before,
+.flatpickr-calendar::after {
+    display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+main {
+    padding-top: 90px;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    height: calc(100dvh - 89px);
+    /* 1px reserve for scroll handling */
+}
+
+@media (max-width: 767px) {
+    header h1 {
+        font-size: 3.5rem;
+        line-height: 3.25rem;
+    }
+
+    header p {
+        width: 80%;
+        font-size: 14px;
+        margin-top: 4px;
+    }
+
+    header form .field.range {
+        display: flex;
+        width: 250px;
+    }
+
+    header form .field.check-in,
+    header form .field.check-out {
+        display: none;
+    }
+
+    header form button > span {
+        display: none;
+    }
+
+    header form button {
+        display: none;
+    }
+}
