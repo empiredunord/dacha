@@ -18,13 +18,21 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     transition: height 0.3s;
     position: fixed;
     left: 0;
     top: 0;
     right: 0;
     box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex: 1;
 }
 
 header h1 {
@@ -116,13 +124,38 @@ header form button > i {
     display: none;
 }
 
+header .socials {
+    display: flex;
+    list-style: none;
+    gap: 16px;
+    transform: translateY(-40px);
+}
+
+header .socials a {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    text-decoration: none;
+}
+
+header .socials a:hover {
+    opacity: 0.9;
+}
+
+header .socials svg {
+    fill: white;
+    height: 24px;
+    width: 24px;
+}
+
 header.compact {
     height: 90px;
     border-bottom: 1px solid #606060;
 }
 
 header.compact h1,
-header.compact p {
+header.compact p,
+header.compact .socials {
     display: none;
 }
 
