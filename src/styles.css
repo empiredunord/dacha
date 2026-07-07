@@ -190,6 +190,10 @@ iframe {
     /* 1px reserve for scroll handling */
 }
 
+iframe[src=""] {
+    visibility: hidden;
+}
+
 @media (max-width: 767px) {
     header h1 {
         font-size: 3.5rem;
