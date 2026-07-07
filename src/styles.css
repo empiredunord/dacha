@@ -78,6 +78,12 @@ header form .field {
     display: flex;
     align-items: baseline;
     gap: 12px;
+    opacity: 0.4;
+    transition: opacity 0.15s;
+}
+
+header form .field:has(.form-control) {
+    opacity: 1;
 }
 
 header form .field.range {
@@ -208,7 +214,7 @@ iframe[src=""] {
 
     header form .field.range {
         display: flex;
-        width: 250px;
+        width: 260px;
     }
 
     header form .field.check-in,
