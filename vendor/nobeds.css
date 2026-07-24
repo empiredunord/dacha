@@ -164,6 +164,18 @@
     background: white;
 }
 
+.booking-page .sold-out {
+    background: #ff7200;
+    color: white;
+    padding: 10px 32px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
 @media (min-width: 768px) and (max-width: 980px) {
     .col-md-4 {
         width: 50%;
